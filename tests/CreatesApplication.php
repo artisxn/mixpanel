@@ -9,16 +9,16 @@ trait CreatesApplication
     public function createApplication()
     {
         $this->copyFixtures([
-            __DIR__ . '/Fixtures/App/Http/Controllers/HomeController.php' => __DIR__ . '/../vendor/laravel/laravel/app/Http/Controllers/HomeController.php',
-            __DIR__ . '/Fixtures/resources/views/home.blade.php' => __DIR__ . '/../vendor/laravel/laravel/resources/views/home.blade.php',
-            __DIR__ . '/Fixtures/resources/views/auth/login.blade.php' => __DIR__ . '/../vendor/laravel/laravel/resources/views/auth/login.blade.php',
-            __DIR__ . '/Fixtures/resources/views/auth/register.blade.php' => __DIR__ . '/../vendor/laravel/laravel/resources/views/auth/register.blade.php',
-            __DIR__ . '/Fixtures/resources/views/auth/passwords/email.blade.php' => __DIR__ . '/../vendor/laravel/laravel/resources/views/auth/passwords/email.blade.php',
-            __DIR__ . '/Fixtures/resources/views/auth/passwords/reset.blade.php' => __DIR__ . '/../vendor/laravel/laravel/resources/views/auth/passwords/email.blade.php',
-            __DIR__ . '/Fixtures/resources/views/layouts/app.blade.php' => __DIR__ . '/../vendor/laravel/laravel/resources/views/layouts/app.blade.php',
-            __DIR__ . '/Fixtures/routes/web.php' => __DIR__ . '/../vendor/laravel/laravel/routes/web.php',
+            __DIR__ . '/Fixtures/App/Http/Controllers/HomeController.php' => __DIR__ . '/../vendor/codicastudio/masterbase/app/Http/Controllers/HomeController.php',
+            __DIR__ . '/Fixtures/resources/views/home.blade.php' => __DIR__ . '/../vendor/codicastudio/masterbase/resources/views/home.blade.php',
+            __DIR__ . '/Fixtures/resources/views/auth/login.blade.php' => __DIR__ . '/../vendor/codicastudio/masterbase/resources/views/auth/login.blade.php',
+            __DIR__ . '/Fixtures/resources/views/auth/register.blade.php' => __DIR__ . '/../vendor/codicastudio/masterbase/resources/views/auth/register.blade.php',
+            __DIR__ . '/Fixtures/resources/views/auth/passwords/email.blade.php' => __DIR__ . '/../vendor/codicastudio/masterbase/resources/views/auth/passwords/email.blade.php',
+            __DIR__ . '/Fixtures/resources/views/auth/passwords/reset.blade.php' => __DIR__ . '/../vendor/codicastudio/masterbase/resources/views/auth/passwords/email.blade.php',
+            __DIR__ . '/Fixtures/resources/views/layouts/app.blade.php' => __DIR__ . '/../vendor/codicastudio/masterbase/resources/views/layouts/app.blade.php',
+            __DIR__ . '/Fixtures/routes/web.php' => __DIR__ . '/../vendor/codicastudio/masterbase/routes/web.php',
         ]);
-        $app = require __DIR__ . '/../vendor/laravel/laravel/bootstrap/app.php';
+        $app = require __DIR__ . '/../vendor/codicastudio/masterbase/bootstrap/app.php';
         $app->make(Kernel::class)->bootstrap();
         $app->register(Service::class);
 
